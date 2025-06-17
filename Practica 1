@@ -1,0 +1,27 @@
+sudo apt install apache2
+sudo systemctl status apache2
+clear
+sudo mkdir -p /var/www/holamundo
+sudo nano /var/www/holamundo/index.html
+cd nano /etc/apache2/sites-available/holamundo.conf
+sudo nano /etc/apache2/sites-available/holamundo.conf
+sudo a2ensite holamundo.conf
+echo "127.0.0.1 holamundo.local" | sudo tee -a /etc/hosts
+sudo nano /etc/hosts
+sudo echo "127.0.0.1 holamundo.local" | sudo tee -a /etc/hosts
+sudo nano /etc/hosts
+sudo systemctl reload apache2
+sudo mkdir -p /var/www/juniorweb
+sudo nano /var/www/juniorweb/index.html
+sudo nano /etc/apache2/sites-available/juniorweb.conf
+sudo a2ensite juniorweb.conf
+sudo nano /etc/apache2/port.conf
+sudo nano /etc/apache2/ports.conf
+sudo systemctl status apache2
+sudo systemctl reload apache2
+clear
+sudo nano /etc/apache2/sites-available/juniorweb.conf
+sudo nano /etc/hosts
+sudo a2ensite juniorweb.conf
+sudo systemctl reload apache2
+history
