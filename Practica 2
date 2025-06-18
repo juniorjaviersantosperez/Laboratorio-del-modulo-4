@@ -1,0 +1,14 @@
+sudo apt install postfix -y
+sudo systemctl start postfix
+sudo systemctl status postfix
+clear
+sudo apt install mailutils
+clear
+sudo nano /etc/postfix/main.cf
+sudo postmap /etc//postfix/sasl_passwd
+sudo postmap /etc/postfix/sasl_passwd
+sudo systemctl restart postfix
+sudo chown root:root /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+sudo chmod 600 /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+echo "Junior Javier Santos Perez - 20241599" | mail -s "MambruSeFueALaGuerra" juniorjaviersantosperez@gmail.com
+echo "Junior Javier Santos Perez - 20241599" | mail -s "MambruSeFueALaGuerra" os3conadrian@gmail.com
