@@ -1,0 +1,10 @@
+sudo apt update
+sudo apt install cups
+sudo systemctl enable cups
+sudo systemctl start cups
+sudo usermod -aG lpadmin $USER
+sudo cupsctl --remote-any --remote-admin --share-printers
+sudo nano /etc/cups/cupsd.conf
+sudo ufw status verbose
+sudo ls /var/spool/cups-pdf/ANONYMOUS
+history
